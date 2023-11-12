@@ -434,6 +434,6 @@ header a {
   }
 
   .popup {
-    transform: scale(0.7);
+    transform: scale(0.6) translateX(-30px);
   }
 }

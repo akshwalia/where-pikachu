@@ -7,12 +7,12 @@ export default function Popup({ x, y, setDisplayCircle, pokemonInfo, setPokemonI
     
     let popUpx, popUpy;
     if(x > window.innerWidth/1.8)
-        popUpx = x - 230;
+        popUpx = x - 210;
     else    
         popUpx = x ;
 
-    if(y > window.innerHeight/1.8)
-        popUpy = y - 230;
+    if(y > document.body.scrollHeight/1.8)
+        popUpy = y - 155;
     else    
         popUpy = y ;
 
@@ -47,7 +47,7 @@ export default function Popup({ x, y, setDisplayCircle, pokemonInfo, setPokemonI
     };
 
     return (
-        <div className="popup" style={{top: popUpy+30, left: popUpx+30}}>
+        <div className="popup" style={{top: popUpy, left: popUpx-50}}>
             {pokemonInfo.map((pokemon) => {
                 return (
                     <div className="option" onClick={handleAnswer}>
