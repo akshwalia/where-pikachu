@@ -432,4 +432,8 @@ header a {
   .tofind {
     transform: scale(0.8);
   }
+
+  .popup {
+    transform: scale(0.7);
+  }
 }
