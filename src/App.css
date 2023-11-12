@@ -1,0 +1,411 @@
+@font-face {
+  font-family: "Pixel";
+  src: url('./assets/pixel.otf') format('opentype');
+}
+
+@font-face {
+  font-family: "Pokemon";
+  src: url('./assets/pokemon.ttf') format('truetype');
+}
+
+body {
+  width: 100%;
+  margin: 0;
+}
+
+header {
+  font-family: 'Pixel', sans-serif;
+  font-size: 30px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  perspective: 10px;
+  z-index: 100;
+}
+
+header img {
+  width: 200px;
+}
+
+.where {
+  color: red;
+  margin-right: 12px;
+}
+
+.tofind {
+  margin-right: 10px;
+  font-family: 'Pokemon', sans-serif;
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  font-size: 12px;
+  gap: 15px;
+}
+
+.tofind img {
+  width: 100px;
+}
+
+.pokemon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pokemon h3 {
+  margin: 0;
+}
+
+.completed {
+  opacity: 0.3;
+}
+
+@media screen and (max-width: 600px) {
+  header {
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .heading {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .circle {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+
+.homepage-main {
+  background-image: url('./assets/pc_background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  min-height: 90vh;
+  perspective: 10px;
+  z-index: 10;
+  background-position: 85% 55%;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media screen and (max-width: 700px) {
+  .homepage-main {
+    background-image: url('./assets/phone_background.jpg');
+    background-position: 50% 50%;
+    
+  }
+}
+
+.menu {
+  display: flex;
+  gap: 10px;
+  padding-top: 20px;
+}
+
+.menu div {
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+  font-family: 'Pixel', sans-serif;
+  font-size: 15px;
+  transition: 0.5s;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.541);
+  color: black;
+}
+
+.menu Link, .menu a {
+  text-decoration: none;
+}
+.menu div:hover {
+  transform: scale(0.95);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.175);
+}
+
+.card {
+  width: fit-content;
+  padding: 30px 20px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+  transition: 0.2s;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.541);
+  font-family: 'Pixel', sans-serif;
+  font-size: 10px;
+}
+
+.card img {
+  width: 250px;
+  height: 250px;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.playbutton {
+  border-radius: 5px;
+  background-color: rgb(75, 75, 198);
+  border: none;
+  color: white;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: 'Pixel', sans-serif;
+  font-size: 15px;
+}
+
+.playbutton:hover {
+  background-color: rgb(75, 75, 198);
+  opacity: 0.8;
+}
+
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px;
+}
+
+.description {
+  font-family: 'Pokemon', sans-serif;
+  font-size: 15px;
+  padding-top: 30px;
+  text-align: center;
+}
+
+.leaderboardcard {
+  cursor: pointer;
+}
+
+.leaderboardcard:hover {
+  transform: scale(0.98);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.175);
+}
+
+.selected {
+  box-shadow: 0px 0px 10px 0px rgb(0, 0, 255);
+}
+
+.selected:hover {
+  transform: scale(1);
+  box-shadow: 0px 0px 10px 0px rgb(0, 0, 255);
+}
+
+.leaderboard {
+  width: 800px;
+  background-color: white;
+  display: grid;
+  grid-template-columns: 0.7fr 1.5fr 1.2fr 1.2fr;
+  border-radius: 10px;
+  border: black 2px solid;
+}
+
+.leaderboard > div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.leaderboard > div > h3 {
+  font-family: 'Pixel', sans-serif;
+  font-size: 15px;
+
+}
+
+.leaderboard > div > div {
+  font-family: 'Pokemon', sans-serif;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+hr {
+  width: 100%;
+  border: black 2px solid;
+  margin-top: -10px;
+}
+
+.rank {
+  border-right: black 2px solid;
+}
+
+#first {
+  color: goldenrod;
+}
+
+#second {
+  color: silver;
+}
+
+#third {
+  color: #683c10;
+}
+
+
+.names {
+  border-right: black 2px solid;
+}
+
+.timetaken {
+  border-right: black 2px solid;
+}
+
+@media  screen and (max-width: 850px) {
+  .leaderboard {
+    transform: scale(0.8);
+  }
+}
+
+@media  screen and (max-width: 700px) {
+  .leaderboard {
+    transform: scale(0.6);
+  }
+}
+
+@media  screen and (max-width: 500px) {
+  .leaderboard {
+    transform: scale(0.45);
+    margin-top: -150px
+  }
+  .cards {
+    transform: scale(0.8);
+    margin-top: -150px;
+  }
+
+}
+.circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: #61dafb5a;
+  border: #282c34 2px solid;
+  position: absolute;
+
+}
+
+.image {
+  width: 100vw;
+}
+
+.popup {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 210px;
+
+}
+
+.optionicon {
+  width: 50px;
+}
+
+.option {
+  font-family: 'Pokemon', sans-serif;
+  display: flex;
+  height: 50px;
+  align-items: center;
+  gap: 10px;
+  border: rgb(82, 81, 81) 2px solid;
+  cursor: pointer;
+  padding: 0 10px;
+}
+
+.backdrop {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  backdrop-filter: blur(3px);
+  z-index: 20;
+  perspective: 10px;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.instructions {
+  max-width: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  
+  background-color: white;
+  border: black 5px solid;
+  padding: 35px 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.instructions input {
+  border-radius: 5px;
+  background-color: rgba(240, 248, 255, 0.5);
+  padding: 6px 12px;
+  font-family: 'Pokemon', sans-serif;
+  font-size: 15px;
+  margin-top: 10px;
+}
+
+.instructions h1 {
+  font-family: 'Pixel', sans-serif;
+  font-size: 27px;
+}
+
+.instructions * {
+  text-align: center;
+}
+
+.instructions p {
+  font-family: 'Pokemon', sans-serif;
+
+}
+
+.instructions button {
+  border-radius: 5px;
+  border: none;
+  background-color: rgba(240, 248, 255, 0);
+  padding: 6px 12px;
+  cursor: pointer;
+  font-family: 'Pixel', sans-serif;
+  font-size: 20px;
+}
+
+.instructions button:hover {
+  transform: scale(1.1);
+}
+
+.loading {
+  font-family: 'Pixel', sans-serif;
+  margin-top: 10px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+header a {
+  all: unset;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  cursor: pointer;
+}
