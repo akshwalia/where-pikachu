@@ -46,7 +46,7 @@ function App() {
       <main className='homepage-main'>
         <div className="menu">
           <Link to='/leaderboard'><div>Leaderboard</div></Link>
-          <a href="https://www.github.com" target='_blank'><div className="Github">Git Repo</div></a>
+          <a href="https://github.com/akshwalia/where-pikachu" target='_blank'><div className="Github">Git Repo</div></a>
         </div>
         <div className="cards">
           <Card Image={FirstImage} title="First Generation" />
