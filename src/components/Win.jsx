@@ -21,7 +21,7 @@ export default function Win({ timeTaken, game }) {
         const data = await response.json();
         console.log(data);
         navigate('/leaderboard');
-        window.location.reload();
+        
     }
     return (
         <div className="backdrop">
