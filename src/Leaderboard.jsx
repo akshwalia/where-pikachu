@@ -32,7 +32,7 @@ function Leaderboard() {
 
   useEffect(() => {
     async function fetchData() {
-      const response = await fetch('http://localhost:3000/leaderboard/' + selected);
+      const response = await fetch('https://where-pikachu-api.onrender.com/leaderboard/' + selected);
       const data = await response.json();
       setData(data);
       console.log(data);

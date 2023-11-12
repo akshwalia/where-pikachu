@@ -26,7 +26,7 @@ export default function Popup({ x, y, setDisplayCircle, pokemonInfo, setPokemonI
         console.log("Y: "+percentY);
 
         const pokemon = e.target.innerText;
-        const response = await fetch('http://localhost:3000/pokemon/'+game+'/'+pokemon,
+        const response = await fetch('https://where-pikachu-api.onrender.com/pokemon/'+game+'/'+pokemon,
             {
                 method: 'POST',
                 headers: {

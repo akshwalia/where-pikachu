@@ -10,7 +10,7 @@ export default function Win({ timeTaken, game }) {
         const name = document.getElementById('playername').value;
         console.log(name);
 
-        const response = await fetch('http://localhost:3000/leaderboard/'+game,
+        const response = await fetch('https://where-pikachu-api.onrender.com/leaderboard/'+game,
             {
                 method: 'POST',
                 headers: {
