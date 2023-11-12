@@ -10,36 +10,6 @@ import Card from './components/Card'
 import { Link } from 'react-router-dom'
 
 function App() {
-  const [displayCircle, setDisplayCircle] = useState(false);
-  const [{ x, y }, setCoordinates] = useState({ x: 0, y: 0 });
-
-
-  const handleClick = (e) => {
-    // console.log(`ClientX: ${e.clientX}, ClientY: ${e.clientY}`);
-    // console.log(`ScreenX: ${e.screenX}, ScreenY: ${e.screenY}`);
-    // console.log(`PageX: ${e.pageX}, PageY: ${e.pageY}`);
-    // console.log(document.querySelector('.image').naturalWidth);
-    // console.log(window.innerWidth);
-    // console.log(document.querySelector('.image').naturalHeight);
-    // console.log((window.innerWidth/document.querySelector('.image').naturalWidth)*document.querySelector('.image').naturalHeight);
-    if (displayCircle) {
-      setDisplayCircle(false);
-    }
-    else {
-      setCoordinates({ x: e.pageX, y: e.pageY });
-      setDisplayCircle(true);
-
-    }
-
-
-
-    // console.log(document.querySelector('.image').offsetTop);
-    // console.log(document.querySelector('.image').offsetLeft);
-    // console.log("X: "+percentX);
-    // console.log("Y: "+percentY);
-  }
-
-
   return (
     <>
       <Header />
