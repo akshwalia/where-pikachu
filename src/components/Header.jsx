@@ -5,6 +5,14 @@ export default function Header({ pokeInfo }) {
     return (
         <>
             <header>
+                
+                <a href="/">
+                    <img src={Detective} alt="Pikachu with a magnifying glass" />
+                    <div className='heading'>
+                        <span className='where'>Where's </span> Pikachu
+                    </div>
+                </a>
+
                 {(pokeInfo) ?
                     <div className="tofind">
                         {pokeInfo.map((pokemon, index) => {
@@ -33,12 +41,7 @@ export default function Header({ pokeInfo }) {
                             <h3>{names[2]}</h3>
                         </div> */}
                     </div> : null}
-                <a href="/">
-                    <img src={Detective} alt="Pikachu with a magnifying glass" />
-                    <div className='heading'>
-                        <span className='where'>Where's </span> Pikachu
-                    </div>
-                </a>
+                    
             </header>
         </>
     )
