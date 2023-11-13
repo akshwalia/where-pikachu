@@ -382,9 +382,10 @@ form {
 
 .loading {
   font-family: 'Pixel', sans-serif;
-  margin-top: 10px;
+  margin-top: 20px;
   font-size: 20px;
   margin-bottom: 20px;
+  text-align: center;
 }
 
 header a {

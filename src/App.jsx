@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './App.css'
 import FirstImage from './assets/first.jpg'
 import SecondImage from './assets/second.jpg'
@@ -10,6 +10,30 @@ import Card from './components/Card'
 import { Link } from 'react-router-dom'
 
 function App() {
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const startAPI = async () => {
+      try {
+        const response = await fetch('https://where-pikachu-api.onrender.com/');
+        const data = await response.json();
+        setLoading(false);
+      }
+      catch (err) {
+        console.log(err);
+      }
+    }
+    startAPI();
+  }, [])
+
+  if (loading) {
+    return (
+      <>
+        <Header />
+        <div className='loading'>Loading...</div>
+      </>
+    )
+  }
+
   return (
     <>
       <Header />
